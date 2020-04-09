@@ -1,4 +1,4 @@
 class ThoughtSerializer < ActiveModel::Serializer
-  belongs_to :user
-  attributes :id, :text, :user
+  # belongs_to :user
+  attributes :text
 end

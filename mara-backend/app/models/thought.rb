@@ -1,4 +1,8 @@
 class Thought < ApplicationRecord
-    belongs_to :user
-    attributes :id, :text, :user
+    include ActiveModel::Serializers::JSON
+    # belongs_to :user
+    attribute :text
+    validates :text, presence: true
+
+
 end
