@@ -6,7 +6,7 @@ def index
 end
 
 def create
-    @thought.new(thought_params)
+    @thought = Thought.new(thought_params)
     if @thought.save        
         render :json => @thoughts, each_serializer: ThoughtSerializer, status: :accepted
     else
