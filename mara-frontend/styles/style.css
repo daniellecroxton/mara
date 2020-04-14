@@ -1,0 +1,37 @@
+/* * * MAIN STYLES * * * * * * * * * * * * * */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background: #fa71cd;
+    background: -webkit-linear-gradient(#c471f5, #fa71cd);
+    background: -o-linear-gradient(#c471f5, #fa71cd);
+    background: -moz-linear-gradient(#c471f5, #fa71cd);
+    background: linear-gradient(#c471f5, #fa71cd);
+    background-attachment: fixed
+}
+
+.container {
+    float: left;
+    width: 60%;
+    padding: 5% 20%;
+}
+
+
+/* * * TYPE * * * * * * * * * * * * * * * * */
+
+
+/* * * RESPONSIVITY * * * * * * * * * * * * */
+
+@media screen and (max-width: 800px) {
+    .left,
+    .main,
+    .right {
+        width: 100%;
+    }
+}
