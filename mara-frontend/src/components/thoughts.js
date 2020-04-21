@@ -23,5 +23,6 @@ class Thoughts {
         // let p = document.createElement("p")
         // mainContainer.appendChild(p)
         // mainContainer.innerText = 'my thoughts here'
+        console.log('my notes are', this.thoughts)
     }
 }
