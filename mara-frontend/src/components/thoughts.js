@@ -11,6 +11,7 @@ class Thoughts {
             .getThoughts()
             .then(thoughts => {
                 thoughts.forEach(thought => this.thoughts.push(new Thought(thought)))
+                    // Why are my thought objects undefined?
                 console.log(this.thoughts)
             })
             .then(() => {
