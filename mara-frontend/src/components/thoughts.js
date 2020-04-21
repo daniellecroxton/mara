@@ -10,7 +10,8 @@ class Thoughts {
         this.adapter
             .getThoughts()
             .then(thoughts => {
-                thoughts.forEach(thought => this.thoughts.push(thought))
+                thoughts.forEach(thought => this.thoughts.push(new Thought(thought)))
+                console.log(this.thoughts)
             })
             .then(() => {
                 this.render()
@@ -18,11 +19,10 @@ class Thoughts {
     }
 
     render() {
-        // Why is this removing all the content of this container instead of just appending to bottom?
-        // const mainContainer = document.getElementById('main-container')
-        // let p = document.createElement("p")
-        // mainContainer.appendChild(p)
-        // mainContainer.innerText = 'my thoughts here'
+        const secondContainer = document.getElementById('secondary-container')
+        let p = document.createElement("p")
+        secondContainer.appendChild(p)
+        secondContainer.innerText = 'my thoughts here'
         console.log('my notes are', this.thoughts)
     }
 }
