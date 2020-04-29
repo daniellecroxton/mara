@@ -11,8 +11,6 @@ class Thoughts {
             .getThoughts()
             .then(thoughts => {
                 thoughts.forEach(thought => this.thoughts.push(new Thought(thought)))
-                    // Why are my thought objects undefined?
-                console.log(this.thoughts)
             })
             .then(() => {
                 this.render()
@@ -21,9 +19,7 @@ class Thoughts {
 
     render() {
         const secondContainer = document.getElementById('secondary-container')
-        let p = document.createElement("p")
-        secondContainer.appendChild(p)
-        secondContainer.innerText = 'my thoughts here'
+        secondContainer.innerHTML = this.thoughts.map(thought => `<li>${thought.text}</li>`).join('')
         console.log('my thoughts are', this.thoughts)
     }
 }
