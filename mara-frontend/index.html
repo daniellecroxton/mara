@@ -6,11 +6,11 @@
     <title>ADD TITLE HERE</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="application/javascript" src="src/components/thought.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/components/thoughts.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/components/app.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/adapters/ThoughtsAdapter.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+    <script src="src/components/thought.js"></script>
+    <script src="src/components/thoughts.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/ThoughtsAdapter.js"></script>
+    <script src="src/index.js"></script>
 
 
 </head>
@@ -21,11 +21,12 @@
         <div id="new-thought-container">
             <h3>What's on your mind?</h3>
             <form id="new-thought-form">
-                <textarea min="1" required="true" rows="4"></textarea>
+                <textarea minlength="1" required rows="4"></textarea>
                 <input type="submit" />
             </form>
         </div>
-        <ul id="secondary-container"></ul>
+        <ul id="secondary-container">
+        </ul>
 
     </div>
 </body>
