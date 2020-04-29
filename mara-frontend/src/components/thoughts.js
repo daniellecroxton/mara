@@ -24,6 +24,6 @@ class Thoughts {
         let p = document.createElement("p")
         secondContainer.appendChild(p)
         secondContainer.innerText = 'my thoughts here'
-        console.log('my notes are', this.thoughts)
+        console.log('my thoughts are', this.thoughts)
     }
 }
