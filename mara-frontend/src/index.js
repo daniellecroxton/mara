@@ -1,3 +1,7 @@
-const app = new App()
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
 
-console.log("JS loaded")
+    const app = new App()
+
+    console.log("JS loaded")
+});
