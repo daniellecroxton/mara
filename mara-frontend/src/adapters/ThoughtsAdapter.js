@@ -10,9 +10,9 @@ class ThoughtsAdapter {
 
     createThought(value) {
         const thought = {
-                text: value
-            }
-            // debugger
+            text: value,
+        }
+        debugger
         return fetch(this.baseUrl, {
             method: 'POST',
             headers: {

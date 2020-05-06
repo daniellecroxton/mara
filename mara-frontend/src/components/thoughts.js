@@ -11,6 +11,7 @@ class Thoughts {
         this.secondContainer = document.getElementById('secondary-container');
         this.newThoughtBody = document.getElementById('new-thought-text')
         this.thoughtForm = document.getElementById('new-thought-form')
+        console.log(this)
         this.thoughtForm.addEventListener('submit', this.createThought.bind(this))
     }
 
@@ -19,6 +20,7 @@ class Thoughts {
         const value = this.newThoughtBody.value
 
         this.adapter.createThought(value).then(thought => {
+
             console.log(thought)
             this.thoughts.push(new Thought(thought))
             this.newThoughtBody.value = ''
