@@ -25,4 +25,4 @@ end
 
 # ISSUES
 
-#Foreign key to user model on user db instead of string
+# Foreign key to user model on user db instead of string
