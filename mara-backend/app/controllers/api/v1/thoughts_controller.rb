@@ -24,13 +24,5 @@ end
 
 
 # ISSUES
-# 1. When trying to submit input getting errors:
-#     - Rendered ActiveModel::Serializer::Null with Hash
-#     - Processing by Api::V1::ThoughtsController#create as */*
-#         Parameters: {"thought"=>{}}
-#         Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
-#     - ​<ActionController::ParameterMissing: param is missing or the value is empty: thought>"
-#
-# Related to creating while using serializers?
 
 #Foreign key to user model on user db instead of string
