@@ -6,10 +6,9 @@ def index
 end
 
 def create
-    # binding.pry
     @thought = Thought.new(thought_params)
-    if @thought.save        
-        render :json => @thoughts, each_serializer: ThoughtSerializer, status: 201
+    if @thought.save     
+        render :json => @thought, each_serializer: ThoughtSerializer, status: 201
     else
         render json: { errors: @thought.errors.full_messages }, status: 422
     end
@@ -33,3 +32,5 @@ end
 #     - ​<ActionController::ParameterMissing: param is missing or the value is empty: thought>"
 #
 # Related to creating while using serializers?
+
+#Foreign key to user model on user db instead of string

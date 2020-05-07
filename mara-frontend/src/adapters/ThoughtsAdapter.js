@@ -17,7 +17,7 @@ class ThoughtsAdapter {
             headers: {
                 'content-type': 'application/json',
             },
-            text: JSON.stringify({ thought }),
+            body: JSON.stringify({ thought }),
         }).then(res => res.json())
 
     }
