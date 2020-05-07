@@ -1,5 +1,10 @@
 /* * * MAIN STYLES * * * * * * * * * * * * * */
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 html,
 body {
     height: 100%;
@@ -8,11 +13,11 @@ body {
 body {
     width: 100%;
     margin: 0 auto;
-    background: #fa71cd;
-    background: -webkit-linear-gradient(#c471f5, #fa71cd);
-    background: -o-linear-gradient(#c471f5, #fa71cd);
-    background: -moz-linear-gradient(#c471f5, #fa71cd);
-    background: linear-gradient(#c471f5, #fa71cd);
+    background: #4b84be;
+    background: -webkit-linear-gradient(#4ba1be, #4b84be);
+    background: -o-linear-gradient(#4ba1be, #4b84be);
+    background: -moz-linear-gradient(#4ba1be, #4b84be);
+    background: linear-gradient(#4ba1be, #4b84be);
     background-attachment: fixed
 }
 
@@ -24,6 +29,22 @@ body {
 
 
 /* * * TYPE * * * * * * * * * * * * * * * * */
+
+input {
+    color: white;
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+}
+
+input:hover {
+    text-decoration: underline;
+}
+
+textarea {
+    color: black;
+}
 
 
 /* * * RESPONSIVITY * * * * * * * * * * * * */

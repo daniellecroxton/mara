@@ -12,7 +12,6 @@ class ThoughtsAdapter {
         const thought = {
             text: value,
         }
-        debugger
         return fetch(this.baseUrl, {
             method: 'POST',
             headers: {
@@ -20,5 +19,6 @@ class ThoughtsAdapter {
             },
             text: JSON.stringify({ thought }),
         }).then(res => res.json())
+
     }
 }

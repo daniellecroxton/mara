@@ -20,7 +20,7 @@ class Thoughts {
         const value = this.newThoughtBody.value
 
         this.adapter.createThought(value).then(thought => {
-
+            debugger
             console.log(thought)
             this.thoughts.push(new Thought(thought))
             this.newThoughtBody.value = ''
