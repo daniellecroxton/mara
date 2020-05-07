@@ -8,7 +8,7 @@ class Thoughts {
 
 
     initBindingsAndEventListeners() {
-        this.secondContainer = document.getElementById('secondary-container');
+        this.pastThoughts = document.getElementById('past-thoughts');
         this.newThoughtBody = document.getElementById('new-thought-text')
         this.thoughtForm = document.getElementById('new-thought-form')
         console.log(this)
@@ -41,7 +41,7 @@ class Thoughts {
     }
 
     render() {
-        this.secondContainer.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
+        this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
         console.log('my thoughts are', this.thoughts)
     }
 }
