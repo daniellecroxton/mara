@@ -21,8 +21,3 @@ def thought_params
 end
 
 end
-
-
-# ISSUES
-
-# Foreign key to user model on user db instead of string
