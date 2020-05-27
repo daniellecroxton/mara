@@ -2,6 +2,9 @@ class Api::V1::ThoughtsController < ApplicationController
 
 def index
     @thoughts = Thought.all
+    # options = {
+    #     include: [:category]
+    # }
     render :json => @thoughts, each_serializer: ThoughtSerializer, status: 200
 end
 
