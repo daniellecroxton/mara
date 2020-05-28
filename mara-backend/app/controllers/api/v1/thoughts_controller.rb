@@ -20,7 +20,7 @@ end
 private
 
 def thought_params
-    params.require(:thought).permit(:text)
+    params.require(:thought).permit(:text, :category)
 end
 
 end
