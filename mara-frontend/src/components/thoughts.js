@@ -17,17 +17,20 @@ class Thoughts {
 
     createThought(e) {
         e.preventDefault()
-            // debugger;
+        debugger;
+        // Category not coming through right :/
         const textValue = this.newThoughtBody.value
         const categoryValue = this.newThoughtCategory.value
+        const categoryId = this.newThoughtCategory.value.id
         const values = {
             text: textValue,
-            category: categoryValue
+            category: categoryValue,
+            category_id: categoryId
         }
 
         this.adapter.createThought(values).then(thought => {
 
-            this.thoughts.push(new Thought(thought))
+            this.thoughts.push(new Thought(values))
             this.newThoughtBody.value = ''
             this.render()
 
