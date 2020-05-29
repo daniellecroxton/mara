@@ -20,11 +20,9 @@ class Thoughts {
         debugger;
         // Category not coming through right :/
         const textValue = this.newThoughtBody.value
-        const categoryValue = this.newThoughtCategory.value
-        const categoryId = this.newThoughtCategory.value.id
+        const categoryId = this.newThoughtCategory.value
         const values = {
             text: textValue,
-            category: categoryValue,
             category_id: categoryId
         }
 
