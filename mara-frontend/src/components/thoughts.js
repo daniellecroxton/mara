@@ -49,3 +49,11 @@ class Thoughts {
         this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
     }
 }
+
+// categories 
+// 1. An h2 for each category
+//    a. iterate over categories
+//    b. for each category (new function?), create an h2 element with category name
+// 2. Each list item to render under the h2 for its category
+//    a. this.thoughts.map - is there a way to map only elements with a matching category id?
+//    b. use the renderLi
