@@ -46,6 +46,9 @@ class Thoughts {
     }
 
     render() {
+        const categories = Category.all
+        document.createElement(h2)
+        this.pastThoughts.innerHTML = categories.map(category => category.)
         this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
     }
 }

@@ -6,6 +6,6 @@ class Thought {
     }
 
     renderLi() {
-        return `<li>${this.text}</li>`
+        return `<li>${this.text} - ${this.category.name}</li>`
     }
 }
