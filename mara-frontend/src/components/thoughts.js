@@ -17,8 +17,7 @@ class Thoughts {
 
     createThought(e) {
         e.preventDefault()
-        debugger;
-        // Category not coming through right :/
+            // debugger;
         const textValue = this.newThoughtBody.value
         const categoryId = this.newThoughtCategory.value
         const values = {
