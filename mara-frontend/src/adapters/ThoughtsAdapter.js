@@ -8,10 +8,7 @@ class ThoughtsAdapter {
 
     }
 
-    createThought(value) {
-        const thought = {
-            text: value,
-        }
+    createThought(thought) {
         return fetch(this.baseUrl, {
             method: 'POST',
             headers: {

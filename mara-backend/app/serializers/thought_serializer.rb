@@ -1,5 +1,5 @@
 class ThoughtSerializer < ActiveModel::Serializer
-  # belongs_to :user
-  attributes :id, :text, :created_at
+  # belongs_to :category
+  attributes :id, :text, :created_at, :category_id, :category
 
 end

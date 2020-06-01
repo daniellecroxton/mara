@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200407154926) do
+ActiveRecord::Schema.define(version: 20200520032938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "thoughts", force: :cascade do |t|
-    t.string "text"
-    t.string "user"
+  create_table "categories", force: :cascade do |t|
+    t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "thoughts", force: :cascade do |t|
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_thoughts_on_category_id"
+  end
+
+  add_foreign_key "thoughts", "categories"
 end

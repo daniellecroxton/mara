@@ -22,7 +22,12 @@
             <h3>What's on your mind?</h3>
             <form id="new-thought-form">
                 <textarea minlength="1" required rows="4" id="new-thought-text"></textarea>
-                <input type="submit" />
+                <select id="category_values" name="category_values" class="custom-select">
+                    <option value="1">Question</option>
+                    <option value="2">Worry</option>
+                    <option value="3">To Do</option>
+                  </select>
+                <input type="submit" value="Note it" />
             </form>
         </div>
         <div id="secondary-container">
