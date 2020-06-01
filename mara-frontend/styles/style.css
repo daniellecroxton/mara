@@ -44,24 +44,41 @@ body {
 
 /* * * NEW THOUGHT FORM * * * * * * * * * * * * * * * * */
 
-input {
-    color: white;
-    background: none!important;
-    border: none;
-    padding: 0!important;
-    cursor: pointer;
-}
-
-input:hover {
-    text-decoration: underline;
-}
-
 textarea {
     color: black;
+    width: 50%;
+    border: none;
+}
+
+textarea:required {
+    box-shadow: none;
+    border-color: darkslategray;
+}
+
+textarea:invalid {
+    box-shadow: none;
+    border-color: darkslategray;
 }
 
 select {
-    color: black;
+    color: white;
+    padding: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 0.5px;
+    border-radius: 4px;
+    background-color: transparent;
+    display: block;
+    width: 50%;
+    margin: 20px 0px;
+}
+
+input {
+    color: darkslategray;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 15%;
 }
 
 
