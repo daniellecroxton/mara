@@ -17,7 +17,7 @@ class Api::V1::ThoughtsController < ApplicationController
     private
 
     def thought_params
-        params.require(:thought).permit(:text, :category_id)
+        params.require(:thought).permit(:text, :category_id, :category)
     end
 
 end

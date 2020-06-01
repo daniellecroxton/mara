@@ -23,9 +23,9 @@ class Thoughts {
         }
 
         this.adapter.createThought(values).then(thought => {
-            console.log(thought)
-            this.thoughts.push(new Thought(values))
+            this.thoughts.push(new Thought(thought))
             this.newThoughtBody.value = ''
+            this.newThoughtCategory.value = 1
             this.render()
 
         })
@@ -43,14 +43,9 @@ class Thoughts {
     }
 
     render() {
-        // debugger;
         this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
     }
 }
-
-//issue
-// within renderLi this.category does not exist, TypeError: thoughtJSON.category is undefined, related to loading?
-
 
 // categories 
 // 1. An h2 for each category
