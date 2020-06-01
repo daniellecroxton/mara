@@ -25,7 +25,7 @@ class Thoughts {
         this.adapter.createThought(values).then(thought => {
             this.thoughts.push(new Thought(thought))
             this.newThoughtBody.value = ''
-            this.newThoughtCategory.value = 1
+            this.newThoughtCategory.value = ''
             this.render()
 
         })
