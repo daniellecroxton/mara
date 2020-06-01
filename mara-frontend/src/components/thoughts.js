@@ -17,18 +17,15 @@ class Thoughts {
 
     createThought(e) {
         e.preventDefault()
-            // debugger;
-        const textValue = this.newThoughtBody.value
-        const categoryId = this.newThoughtCategory.value
         const values = {
-            text: textValue,
-            category_id: categoryId
+            text: this.newThoughtBody.value,
+            category_id: this.newThoughtCategory.value
         }
 
         this.adapter.createThought(values).then(thought => {
-
+            debugger;
             this.thoughts.push(new Thought(values))
-            this.newThoughtBody.value = ''
+            this.newThoughtBody.innerHTML = ''
             this.render()
 
         })
@@ -46,9 +43,6 @@ class Thoughts {
     }
 
     render() {
-
-
-
         this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
     }
 }
