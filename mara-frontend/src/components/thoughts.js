@@ -4,6 +4,7 @@ class Thoughts {
         this.adapter = new ThoughtsAdapter()
         this.initBindingsAndEventListeners()
         this.fetchAndLoadThoughts()
+        this.baseUrl = "http://localhost:3000/api/v1/thoughts"
     }
 
 
@@ -13,6 +14,8 @@ class Thoughts {
         this.newThoughtCategory = document.getElementById('category_values')
         this.thoughtForm = document.getElementById('new-thought-form')
         this.thoughtForm.addEventListener('submit', this.createThought.bind(this))
+        this.sortButton = document.getElementById('sort_button')
+        this.sortButton.addEventListener("click", this.sortThoughts.bind(this))
     }
 
     createThought(e) {
@@ -42,10 +45,42 @@ class Thoughts {
             })
     }
 
+    sortThoughts() {
+        fetch(this.baseUrl).then(res => res.json())
+            .then(thoughts => {
+                thoughts.sort(function(a, b) {
+                    let textA = a.text.toUpperCase();
+                    let textB = b.text.toUpperCase();
+                    if (textA < textB) {
+                        return -1;
+                    }
+                    if (textA > textB) {
+                        return 1;
+                    }
+                    return 0;
+                })
+                this.thoughts = []
+                thoughts.forEach(thought => this.thoughts.push(new Thought(thought)))
+                this.render()
+            })
+    }
+
+
+
     render() {
         this.pastThoughts.innerHTML = this.thoughts.map(thought => thought.renderLi()).join('')
     }
+
 }
+
+// 1. Add button to say sort
+// 2. Trigger javascript on click (console.log)
+// 3. Fetch thoughts, sort, display to DOM
+
+// Display to DOM as homework, and review how I cleared and repopulated DIV with sorted array, 
+// book another slot, reviewing homework and scope and hoisting
+
+
 
 // categories 
 // 1. An h2 for each category

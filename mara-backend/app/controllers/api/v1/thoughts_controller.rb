@@ -2,6 +2,7 @@ class Api::V1::ThoughtsController < ApplicationController
 
     def index
         @thoughts = Thought.all
+        
         render :json => @thoughts, each_serializer: ThoughtSerializer, status: 200
     end
 
@@ -17,7 +18,7 @@ class Api::V1::ThoughtsController < ApplicationController
     private
 
     def thought_params
-        params.require(:thought).permit(:text, :category_id, :category)
+        params.require(:thought).permit(:text, :category, :category_id)
     end
 
 end

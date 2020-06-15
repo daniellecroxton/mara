@@ -3,6 +3,8 @@ class Thought {
         this.id = thoughtJSON.id
         this.text = thoughtJSON.text
         this.category = thoughtJSON.category
+        this.categoryId = thoughtJSON.category.id
+
     }
 
     renderLi() {
